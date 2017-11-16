@@ -102,8 +102,6 @@ const tests = {
     const format = '%y';
     const expected = '09';
     const actual = strftime(format, this.date);
-    console.log('actual', actual);
-    console.log('type of actual', typeof actual);
     assert('%y should return year shorthand', actual === expected);
   }
 };
