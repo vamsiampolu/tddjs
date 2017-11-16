@@ -1,0 +1,16 @@
+{
+  "name": "tddjs",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "vamsiampolu <vamsiampolu3000@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "http-server": "^0.10.0",
+    "rollup": "^0.51.5"
+  },
+  "scripts": {
+    "build": "rollup strftime.test.js --o ./public/bundle.js --f iife",
+    "serve": "http-server -p 3020",
+    "start": "yarn build && yarn serve"
+  }
+}
