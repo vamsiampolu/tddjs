@@ -1,3 +1,4 @@
-export default function trim () {
-  throw new Error('Unsupported Operation')
+export default function trim (str) {
+  const temp = str.replace(/^\s+/, '')
+  return temp.replace(/\s+$/, '')
 }
