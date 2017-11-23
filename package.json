@@ -8,6 +8,7 @@
     "http-server": "^0.10.0",
     "husky": "^0.14.3",
     "lint-staged": "^5.0.0",
+    "open-cli": "^1.0.5",
     "prettier-standard": "^7.0.3",
     "rollup": "^0.51.5",
     "standard": "^10.0.3"
@@ -16,10 +17,13 @@
     "precommit": "lint-staged",
     "build:ch1": "rollup ./ch1/strftime.test.js --o ./ch1/public/bundle.js --f iife",
     "build:ch2": "rollup ./ch2/trim.test.js --o ./ch2/public/bundle.js --f iife",
+    "build:ch4": "rollup ./ch4/benchmarks/index.js --o ./ch4/benchmarks/build/bundle.js --f iife",
     "serve:ch1": "http-server ./ch1/public -p 3020",
     "serve:ch2": "http-server ./ch2/public -p 3020",
+    "serve:ch4": "http-server ./ch4/benchmarks/build -p 3020",
     "start:ch1": "yarn build:ch1 && yarn serve:ch1",
-    "start:ch2": "yarn build:ch2 && yarn serve:ch2"
+    "start:ch2": "yarn build:ch2 && yarn serve:ch2",
+    "start:ch4": "yarn build:ch4 && yarn serve:ch4"
   },
   "lint-staged": {
     "**/*.js": [
